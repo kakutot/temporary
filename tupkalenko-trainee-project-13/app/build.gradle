@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+apply from: 'dependencies.gradle'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.tupkalenko.trainee.project"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:${versions.frameworks.android.appcompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.frameworks.android.constraintlayout}"
+    implementation "com.google.android.material:material:${versions.frameworks.android.material}"
+
+    implementation "com.jakewharton:butterknife:${versions.frameworks.butterknife}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${versions.frameworks.butterknife}"
+
+    implementation "io.reactivex.rxjava2:rxjava:${versions.frameworks.rxjava}"
+    implementation "io.reactivex.rxjava2:rxandroid:${versions.frameworks.rxandroid}"
+
+    implementation "com.google.dagger:dagger:${versions.frameworks.dagger}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${versions.frameworks.dagger}"
+    
+    implementation "com.google.dagger:dagger-android:${versions.frameworks.dagger}"
+    annotationProcessor "com.google.dagger:dagger-android-processor:${versions.frameworks.dagger}"
+    implementation "com.google.dagger:dagger-android-support:${versions.frameworks.dagger}"
+
+    testImplementation "junit:junit:${versions.frameworks.testing.junit}"
+    testImplementation "org.mockito:mockito-core:${versions.frameworks.testing.mockitocore}"
+    testImplementation "org.mockito:mockito-inline:${versions.frameworks.testing.mockitoinline}"
+    testImplementation "org.robolectric:robolectric:${versions.frameworks.testing.robolectric}"
+    androidTestImplementation "androidx.test:runner:${versions.frameworks.testing.runner}"
+}

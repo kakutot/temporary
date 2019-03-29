@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="error_message_default">Error occured</string>
+    <string name="error_message_confirm">OK</string>
+    <string name="collections_title">Collections</string>
+    <string name="restaurants_title">Restaurants</string>
+    <string name="search">Search</string>
+    <string name="label_results_count">Results count</string>
+    <string name="no_collections">No collections</string>
+    <string name="no_restaurants">No restaurants</string>
+    <string name="no_such_city">No such city</string>
+    <string name="has_online_delivery">Has online delivery</string>
+    <string name="has_table_booking">Has table booking</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/collectionsContentCv"
+    style="@style/Wide"
+    android:clipToPadding="true"
+    android:clipChildren="false"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/restaurantsContentCl"
+            android:background="?attr/selectableItemBackground"
+            style="@style/Match">
+            
+            <TextView
+                android:id="@+id/titleTv"
+                style="@style/Wrap"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Trending this week" />
+
+            <ImageView
+                android:id="@+id/photoIv"
+                style="@style/Wrap"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="24dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTv"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/descriptionTv"
+                style="@style/Wrap"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/photoIv"
+                app:layout_constraintTop_toTopOf="@+id/photoIv"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+
+            <TextView
+                android:id="@+id/resultsCountLabel"
+                style="@style/Wrap"
+                android:layout_marginBottom="8dp"
+                android:text="@string/label_results_count"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/photoIv"
+                app:layout_constraintTop_toBottomOf="@+id/photoIv" />
+
+            <TextView
+                android:id="@+id/resultsCountTv"
+                style="@style/Wrap"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/resultsCountLabel"
+                app:layout_constraintStart_toEndOf="@+id/resultsCountLabel"
+                app:layout_constraintTop_toBottomOf="@+id/resultsCountLabel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

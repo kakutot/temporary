@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/collectionsContentCv"
+    style="@style/Wide"
+    android:clipToPadding="true"
+    android:clipChildren="false"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/restaurantsContentCl"
+        android:background="?attr/selectableItemBackground"
+        style="@style/Match">
+
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/restaurantNameTv"
+            style="@style/Wrap"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Some name" />
+
+        <TextView
+            android:id="@+id/cityTv"
+            style="@style/Wrap"
+            android:textSize="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorGrey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantNameTv"
+            tools:text="Milan" />
+
+        <TextView
+            android:id="@+id/addressTv"
+            style="@style/Wrap"
+            android:textSize="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorGrey"
+            app:layout_constraintStart_toEndOf="@+id/cityTv"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantNameTv"
+            tools:text="Via Varesina, 61" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey"
+            app:layout_constraintEnd_toEndOf="@id/addressTv"
+            app:layout_constraintStart_toStartOf="@id/cityTv"
+            app:layout_constraintTop_toBottomOf="@+id/addressTv" />
+
+        <TextView
+            android:id="@+id/hasOnlineDeliveryTv"
+            style="@style/Wrap"
+            android:textSize="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/has_online_delivery"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="@id/separator"
+            app:layout_constraintTop_toBottomOf="@id/separator" />
+
+        <View
+            android:id="@+id/hasOnlineDeliveryView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/shape_has_something"
+            app:layout_constraintBottom_toTopOf="@+id/hasOnlineDeliveryTv"
+            app:layout_constraintStart_toEndOf="@+id/hasOnlineDeliveryTv"
+            app:layout_constraintTop_toBottomOf="@+id/hasOnlineDeliveryTv" />
+
+        <TextView
+            android:id="@+id/hasTableBookingTv"
+            style="@style/Wrap"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/has_table_booking"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/hasOnlineDeliveryTv"
+            app:layout_constraintTop_toBottomOf="@+id/hasOnlineDeliveryTv" />
+
+        <View
+            android:id="@+id/hasTableBookingview"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_has_something"
+            app:layout_constraintBottom_toTopOf="@+id/hasTableBookingTv"
+            app:layout_constraintEnd_toEndOf="@+id/hasOnlineDeliveryView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/hasOnlineDeliveryView"
+            app:layout_constraintTop_toBottomOf="@+id/hasTableBookingTv"
+            app:layout_constraintVertical_bias="0.584" />
+
+        <ImageView
+            android:id="@+id/restaurantPhotoIv"
+            style="@style/Wrap"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
